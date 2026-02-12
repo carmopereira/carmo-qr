@@ -1,0 +1,108 @@
+.wp-block-create-block-carmo-qr {
+	max-width: 320px;
+	text-align: center;
+
+	.carmo-qr__input {
+		width: 100%;
+		padding: 10px 12px;
+		border: 1px solid #8c8f94;
+		border-radius: 4px;
+		font-size: 14px;
+		box-sizing: border-box;
+
+		&:focus {
+			border-color: #3858e9;
+			outline: none;
+			box-shadow: 0 0 0 1px #3858e9;
+		}
+	}
+
+	.carmo-qr__themes {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+		margin-top: 12px;
+		border: none;
+		padding: 0;
+	}
+
+	.carmo-qr__themes-legend {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
+	.carmo-qr__theme-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		font-size: 13px;
+		cursor: pointer;
+		color: #1e1e1e;
+
+		input[type="radio"] {
+			margin: 0;
+		}
+	}
+
+	.carmo-qr__theme-swatch {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 2px;
+		border: 1px solid #ccc;
+
+		&--red {
+			background-color: #e52521;
+		}
+
+		&--green {
+			background-color: #709b49;
+		}
+
+		&--black {
+			background-color: #000;
+		}
+	}
+
+	.carmo-qr__svg {
+		margin-top: 16px;
+
+		svg {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	.carmo-qr__buttons {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		margin-top: 12px;
+
+		&[hidden] {
+			display: none;
+		}
+	}
+
+	.carmo-qr__btn {
+		padding: 8px 16px;
+		border: 1px solid #1e1e1e;
+		background: #fff;
+		color: #1e1e1e;
+		cursor: pointer;
+		font-size: 14px;
+		border-radius: 4px;
+		transition: background 0.2s, color 0.2s;
+
+		&:hover {
+			background: #1e1e1e;
+			color: #fff;
+		}
+	}
+}

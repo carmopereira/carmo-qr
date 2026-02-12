@@ -1,0 +1,26 @@
+.wp-block-create-block-carmo-qr {
+	padding: 24px;
+
+	.carmo-qr__placeholder {
+		text-align: center;
+		color: #757575;
+
+		.dashicons {
+			font-size: 36px;
+			width: 36px;
+			height: 36px;
+			margin-bottom: 8px;
+		}
+
+		p {
+			margin: 0 0 4px;
+			font-size: 14px;
+			font-weight: 600;
+			color: #1e1e1e;
+		}
+
+		small {
+			font-size: 12px;
+		}
+	}
+}
