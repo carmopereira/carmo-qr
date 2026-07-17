@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Carmo Qr
  * Description:       Interactive QR code generator block. Visitors enter a URL and get a downloadable SVG QR code with color theme support.
- * Version:           0.1.12
+ * Version:           0.1.24
  * Requires at least: 6.9
  * Requires PHP:      8.2
  * Author:            João Carmo Pereira

@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'carmo-qr/carmo-qr',
-		'version' => '0.1.12',
+		'version' => '0.1.24',
 		'title' => 'Carmo QR',
 		'category' => 'widgets',
 		'icon' => 'grid-view',
