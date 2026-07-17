@@ -1,5 +1,5 @@
 import { store, getContext, getElement } from '@wordpress/interactivity';
-import QRCode from 'qrcode-svg';
+import qrcode from 'qrcode-generator';
 
 const THEME_COLORS = {
 	red: '#e52521',
@@ -73,7 +73,7 @@ function buildSVG( modules, moduleCount, theme ) {
 		`</svg>`;
 }
 
-store( 'create-block/carmo-qr', {
+store( 'carmo-qr/carmo-qr', {
 	state: {
 		get isRedTheme() {
 			return getContext().theme === 'red';
@@ -127,14 +127,17 @@ store( 'create-block/carmo-qr', {
 				return;
 			}
 			try {
-				const qr = new QRCode( {
-					content: ctx.url,
-					ecl: 'Q',
-					join: true,
-					container: 'svg-viewbox',
-				} );
-				const modules = qr.qrcode.modules;
-				const moduleCount = modules.length;
+				const qr = qrcode( 0, 'Q' );
+				qr.addData( ctx.url );
+				qr.make();
+				const moduleCount = qr.getModuleCount();
+				const modules = [];
+				for ( let row = 0; row < moduleCount; row++ ) {
+					modules.push( [] );
+					for ( let col = 0; col < moduleCount; col++ ) {
+						modules[ row ].push( qr.isDark( row, col ) );
+					}
+				}
 				const svg = buildSVG( modules, moduleCount, ctx.theme );
 				ctx.svgString = svg;
 				ref.innerHTML = svg;

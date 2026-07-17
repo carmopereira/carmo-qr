@@ -18,7 +18,7 @@ $context = array(
 ?>
 <div
 	<?php echo get_block_wrapper_attributes(); ?>
-	data-wp-interactive="create-block/carmo-qr"
+	data-wp-interactive="carmo-qr/carmo-qr"
 	<?php echo wp_interactivity_data_wp_context( $context ); ?>
 >
 	<input
